@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA1A7E932AB7CC8100007255 /* stellarsdk in Frameworks */ = {isa = PBXBuildFile; productRef = DA1A7E922AB7CC8100007255 /* stellarsdk */; };
 		DA29DF362AB1B2BA009E18B0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA29DF352AB1B2BA009E18B0 /* HomeViewModel.swift */; };
 		DA366DE02AACE369008C3316 /* ActivityRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA366DDF2AACE369008C3316 /* ActivityRow.swift */; };
 		DA366DE42AACF19E008C3316 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA366DE32AACF19E008C3316 /* Member.swift */; };
@@ -104,6 +105,7 @@
 				DA58FE3D2AAB4FEC002FF8DD /* AlertToast in Frameworks */,
 				DA9CA5DB2AAA337B00B0C271 /* FirebaseAuth in Frameworks */,
 				DA9CA5DD2AAA337B00B0C271 /* FirebaseFirestore in Frameworks */,
+				DA1A7E932AB7CC8100007255 /* stellarsdk in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +259,7 @@
 				DA9CA5DA2AAA337B00B0C271 /* FirebaseAuth */,
 				DA9CA5DC2AAA337B00B0C271 /* FirebaseFirestore */,
 				DA58FE3C2AAB4FEC002FF8DD /* AlertToast */,
+				DA1A7E922AB7CC8100007255 /* stellarsdk */,
 			);
 			productName = Divify;
 			productReference = DA9CA5C32AAA259F00B0C271 /* Divify.app */;
@@ -289,6 +292,7 @@
 			packageReferences = (
 				DA9CA5D92AAA337B00B0C271 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				DA58FE3B2AAB4FEC002FF8DD /* XCRemoteSwiftPackageReference "AlertToast" */,
+				DA1A7E912AB7CC8100007255 /* XCRemoteSwiftPackageReference "stellar-ios-mac-sdk" */,
 			);
 			productRefGroup = DA9CA5C42AAA259F00B0C271 /* Products */;
 			projectDirPath = "";
@@ -558,6 +562,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DA1A7E912AB7CC8100007255 /* XCRemoteSwiftPackageReference "stellar-ios-mac-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Soneso/stellar-ios-mac-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.4.2;
+			};
+		};
 		DA58FE3B2AAB4FEC002FF8DD /* XCRemoteSwiftPackageReference "AlertToast" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/elai950/AlertToast.git";
@@ -577,6 +589,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DA1A7E922AB7CC8100007255 /* stellarsdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA1A7E912AB7CC8100007255 /* XCRemoteSwiftPackageReference "stellar-ios-mac-sdk" */;
+			productName = stellarsdk;
+		};
 		DA58FE3C2AAB4FEC002FF8DD /* AlertToast */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DA58FE3B2AAB4FEC002FF8DD /* XCRemoteSwiftPackageReference "AlertToast" */;

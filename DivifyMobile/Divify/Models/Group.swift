@@ -30,16 +30,16 @@ class ExpenseGroup: Identifiable, ObservableObject {
 
 class GroupData: Identifiable, ObservableObject {
     @Published var groups: [ExpenseGroup] = [
-        ExpenseGroup(image: "group1", title: "London Monkeys", expenses: [
+        ExpenseGroup(image: "group1", title: "London Holiday", expenses: [
             Expense(title: "Uber ride to Oxford", amount: 12, previewName: "Huh?", author: "Desean"),
-            Expense(title: "Cheeseburgers at the airport", amount: 831, previewName: "Huh?", author: "Izzy")
+            Expense(title: "Cheeseburgers at the airport", amount: 49, previewName: "Huh?", author: "Izzy")
                     ], members: [
                         Member(profileImage: "nkoorty", name: "Artemiy", previewName: "Art", owedAmount: 512, hasPaid: false),
                         Member(profileImage: "jeevan", name: "Jeevan", previewName: "Art", owedAmount: 512, hasPaid: true)
                     ]),
-        ExpenseGroup(image: "group2", title: "Mexico Monkeys", expenses: [
+        ExpenseGroup(image: "group2", title: "Mexico Beach", expenses: [
             Expense(title: "Uber ride to Oxford", amount: 12, previewName: "Huh?", author: "JJ"),
-            Expense(title: "Cheeseburgers at the airport", amount: 831, previewName: "Huh?", author: "Monke")
+            Expense(title: "Cheeseburgers at the airport", amount: 14, previewName: "Huh?", author: "Monke")
                     ], members: [
                         Member(profileImage: "nkoorty", name: "Artemiy", previewName: "Art", owedAmount: 512, hasPaid: true),
                         Member(profileImage: "jeevan", name: "Jeevan", previewName: "Art", owedAmount: 512, hasPaid: false)

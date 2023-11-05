@@ -29,9 +29,9 @@ class Activity: Identifiable, ObservableObject {
 
 class ActivityData: ObservableObject {
     @Published var activities: [Activity] = [
-        Activity(userName: "Jeevan", userProfileImage: "lion", action: ActivityActions.created, group: "Monkeys", paymentAmount: 0, date: "9.9.2023"),
-        Activity(userName: "Adesh", userProfileImage: "monkey", action: ActivityActions.paid, group: "Idiots", paymentAmount: 12, date: "8.9.2023"),
-        Activity(userName: "Artemiy", userProfileImage: "dog", action: ActivityActions.left, group: "Morons", paymentAmount: 0, date: "6.9.2023"),
+        Activity(userName: "Jeevan", userProfileImage: "lion", action: ActivityActions.created, group: "London Gang", paymentAmount: 0, date: "9.9.2023"),
+        Activity(userName: "Adesh", userProfileImage: "monkey", action: ActivityActions.paid, group: "Barcelona", paymentAmount: 12, date: "8.9.2023"),
+        Activity(userName: "Artemiy", userProfileImage: "dog", action: ActivityActions.left, group: "Vienna Getaway", paymentAmount: 0, date: "6.9.2023"),
     ]
     
     func add(_ activity: Activity) {

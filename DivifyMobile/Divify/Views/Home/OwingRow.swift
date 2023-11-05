@@ -1,8 +1,11 @@
 import SwiftUI
+import AlertToast
 
 struct OwingRow: View {
     
     var member: Member
+    
+    @State private var showToast = false
     
     var body: some View {
         VStack(spacing: 12) {
@@ -25,7 +28,7 @@ struct OwingRow: View {
                 Spacer()
                 
                 Button {
-                    
+                    showToast.toggle()
                 } label: {
                     if member.hasPaid {
                         Image(systemName: "checkmark.circle.fill")
@@ -43,7 +46,7 @@ struct OwingRow: View {
                 }
             }
             HStack {
-                Text("\(member.owedAmount * 8.13, specifier: "Pay %.2f XLM ")")
+                Text("\(member.owedAmount * 8.57, specifier: "Pay %.2f XLM ")")
                     .font(.system(size: 14))
                 
                 Button {
@@ -59,6 +62,9 @@ struct OwingRow: View {
                 
                 Spacer()
             }
+        }
+        .toast(isPresenting: $showToast){
+            AlertToast(displayMode: .hud, type: .regular, title: "Minting in Progress")
         }
     }
 }

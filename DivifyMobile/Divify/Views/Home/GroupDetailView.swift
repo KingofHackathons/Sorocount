@@ -1,4 +1,5 @@
 import SwiftUI
+import AlertToast
 
 struct GroupDetailView: View {
     
@@ -7,6 +8,7 @@ struct GroupDetailView: View {
     @State private var isPickingPhoto = false
     @State private var isAddingMember = false
     @State private var isAddingPayment = false
+    @State private var showToast = false
     
     @ObservedObject var groupDataViewModel = GroupDataViewModel()
     @ObservedObject var profileViewModel = ProfileViewModel()
@@ -99,6 +101,9 @@ struct GroupDetailView: View {
                         
                     } else {
                         OwingRow(member: member)
+                            .onTapGesture {
+                                showToast.toggle()
+                            }
                     }
                 }
             }
@@ -115,6 +120,9 @@ struct GroupDetailView: View {
         }
         .onAppear {
             profileViewModel.fetchUsername()
+        }
+        .toast(isPresenting: $showToast){
+            AlertToast(displayMode: .hud, type: .regular, title: "Minting in Progress")
         }
     }
 }

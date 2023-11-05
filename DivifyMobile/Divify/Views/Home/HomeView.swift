@@ -21,23 +21,13 @@ struct HomeView: View {
                         Text("\(profileViewModel.totalAmountOwed, specifier: "US$ %.2f")")
                             .font(.largeTitle).bold()
                         
-                        Text("4 XLM")
+                        Text("\(profileViewModel.totalAmountOwed*8.57, specifier: "%.2f XLM")")
                             .font(.headline).bold()
                     }
                     
                 }
                 .hCenter()
                 .listRowBackground(Color.clear)
-                
-                Section("Your groups") {
-                    ForEach(groupData.groups.indices, id: \.self) { index in
-                        NavigationLink {
-                            GroupDetailView(group: $groupData.groups[index])
-                        } label: {
-                            GroupHomeRow(group: groupData.groups[index])
-                        }
-                    }
-                }
                 
                 Section("All groups") {
                     ForEach(groupServerData.groups.indices, id: \.self) { index in
@@ -46,6 +36,13 @@ struct HomeView: View {
                         } label: {
                             GroupHomeRow(group: groupServerData.groups[index])
 
+                        }
+                    }
+                    ForEach(groupData.groups.indices, id: \.self) { index in
+                        NavigationLink {
+                            GroupDetailView(group: $groupData.groups[index])
+                        } label: {
+                            GroupHomeRow(group: groupData.groups[index])
                         }
                     }
                 }

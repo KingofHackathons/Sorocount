@@ -1,5 +1,6 @@
 import SwiftUI
 import Firebase
+import stellarsdk
 
 struct ProfileView: View {
     @AppStorage("log_status") var logStatus: Bool = false
@@ -8,6 +9,8 @@ struct ProfileView: View {
     @AppStorage("use_face_id") var useFaceID: Bool = false
     @AppStorage("use_face_email") var faceIDEmail: String = ""
     @AppStorage("use_face_password") var faceIDPassword: String = ""
+    
+    let keyPair = try! KeyPair.generateRandomKeyPair()
     
     @State private var showConnectingSheet = false
     
@@ -30,6 +33,7 @@ struct ProfileView: View {
                         
                         Text(formatPublicKey(viewModel.publicKey))
                             .font(.system(size: 16))
+                    
                     }
                     
                     Spacer()
