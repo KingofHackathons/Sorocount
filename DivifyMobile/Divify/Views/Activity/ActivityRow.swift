@@ -25,9 +25,9 @@ struct ActivityRow: View {
                         
                 } else if activity.action == ActivityActions.paid {
                     if let expenseName = activity.expenseName {
-                        Text("\(activity.userName) paid \(activity.paymentAmount) XLM towards \(expenseName)")
+                        Text("\(activity.userName) paid US$ \(activity.paymentAmount) towards \(expenseName)")
                     } else {
-                        Text("\(activity.userName) paid \(activity.paymentAmount) XLM")
+                        Text("\(activity.userName) paid US$ \(activity.paymentAmount)")
                     }
 
                 } else if activity.action == ActivityActions.left {

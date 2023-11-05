@@ -2,7 +2,10 @@ import SwiftUI
 
 struct DetailView: View {
     @Binding var userName: String
+    @Binding var profileImage: String
     @State private var showAlert: Bool = false
+    @State private var showProfileImage = false
+    
     @ObservedObject var viewModel = DetailViewModel()
     @Environment(\.presentationMode) var presentationMode
 
@@ -10,14 +13,14 @@ struct DetailView: View {
         List {
             Section(header: Text("profile image")) {
                 VStack {
-                    Image("cat")
+                    Image(profileImage)
                         .resizable()
                         .scaledToFit()
                         .frame(width: 70, height: 70)
                         .cornerRadius(50)
                     
                     Button {
-                        
+                        showProfileImage.toggle()
                     } label: {
                         Text("Change Profile Image")
                             .foregroundColor(.blue)
@@ -80,6 +83,9 @@ struct DetailView: View {
                     dismissButton: .default(Text("OK"))
                 )
             }
+        }
+        .sheet(isPresented: $showProfileImage) {
+            ChooseProfileView(profileImage: $profileImage)
         }
     }
     

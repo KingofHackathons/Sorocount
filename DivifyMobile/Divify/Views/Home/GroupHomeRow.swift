@@ -23,7 +23,7 @@ struct GroupHomeRow: View {
                         .font(.caption)
 
                 } else {
-                    Text("Error")
+                    Text("No Members")
                         .font(.caption)
 
                 }
@@ -32,18 +32,18 @@ struct GroupHomeRow: View {
             Spacer()
             
             VStack(alignment: .trailing, spacing: 6) {
-                if group.payments.count > 1 {
-                    Text("\(group.payments.count) Payments")
+                if group.expenses.count > 1 {
+                    Text("\(group.expenses.count) Payments")
                         .font(.system(size: 14))
                         .foregroundColor(.gray)
                     
-                } else if group.payments.count == 1 {
-                    Text("\(group.payments.count) Payment")
+                } else if group.expenses.count == 1 {
+                    Text("\(group.expenses.count) Payment")
                         .font(.system(size: 14))
                         .foregroundColor(.gray)
                     
                 } else {
-                    Text("Error")
+                    Text("No Payments")
                         .font(.system(size: 14))
                         .foregroundColor(.gray)
                 }
@@ -52,7 +52,7 @@ struct GroupHomeRow: View {
                     Text("No payments")
                         .font(.caption)
                 } else {
-                    Text("\(group.totalAmount) XLM")
+                    Text("\(group.totalAmount, specifier: "US$ %.2f")")
                         .font(.caption)
                 }
                 
@@ -60,10 +60,3 @@ struct GroupHomeRow: View {
         }
     }
 }
-
-//
-//struct GroupHomeRow_Previews: PreviewProvider {
-//    static var previews: some View {
-//        GroupHomeRow(group: expenseGroups[0])
-//    }
-//}

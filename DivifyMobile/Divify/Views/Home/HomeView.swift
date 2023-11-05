@@ -3,7 +3,11 @@ import Firebase
 
 struct HomeView: View {
     
+    @State private var isShowingAddGroup: Bool = false
     @EnvironmentObject var groupData: GroupData
+    
+    @ObservedObject var profileViewModel = ProfileViewModel()
+    @ObservedObject var groupServerData = GroupDataViewModel()
     
     var body: some View {
         NavigationView {
@@ -14,10 +18,10 @@ struct HomeView: View {
                         .foregroundColor(.black.opacity(0.8))
                     
                     HStack(alignment: .center) {
-                        Text("119 XLM")
+                        Text("\(profileViewModel.totalAmountOwed, specifier: "US$ %.2f")")
                             .font(.largeTitle).bold()
                         
-                        Text("US$ 12.12")
+                        Text("4 XLM")
                             .font(.headline).bold()
                     }
                     
@@ -34,6 +38,17 @@ struct HomeView: View {
                         }
                     }
                 }
+                
+                Section("All groups") {
+                    ForEach(groupServerData.groups.indices, id: \.self) { index in
+                        NavigationLink {
+                            GroupDetailView(group: $groupServerData.groups[index])
+                        } label: {
+                            GroupHomeRow(group: groupServerData.groups[index])
+
+                        }
+                    }
+                }
             }
             .navigationTitle("Home")
             .navigationBarTitleDisplayMode(.inline)
@@ -47,11 +62,20 @@ struct HomeView: View {
                 }
                 ToolbarItem {
                     Button {
+                        isShowingAddGroup.toggle()
                     } label: {
                         Image(systemName: "plus")
                             .foregroundColor(.indigo)
                     }
                 }
+            }
+            .sheet(isPresented: $isShowingAddGroup) {
+                AddGroupView(groups: $groupData.groups)
+            }
+            .onAppear{
+                groupServerData.fetchGroups()
+                profileViewModel.fetchTotalAmountOwed()
+                profileViewModel.fetchUsername()
             }
         }
     }

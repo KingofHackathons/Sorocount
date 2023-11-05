@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA29DF362AB1B2BA009E18B0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA29DF352AB1B2BA009E18B0 /* HomeViewModel.swift */; };
 		DA366DE02AACE369008C3316 /* ActivityRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA366DDF2AACE369008C3316 /* ActivityRow.swift */; };
 		DA366DE42AACF19E008C3316 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA366DE32AACF19E008C3316 /* Member.swift */; };
 		DA366DE62AACF537008C3316 /* MemberRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA366DE52AACF537008C3316 /* MemberRow.swift */; };
 		DA366DE82AAD02E6008C3316 /* PaymentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA366DE72AAD02E6008C3316 /* PaymentRow.swift */; };
-		DA366DEA2AAD02F7008C3316 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA366DE92AAD02F7008C3316 /* Payment.swift */; };
+		DA366DEA2AAD02F7008C3316 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA366DE92AAD02F7008C3316 /* Expense.swift */; };
 		DA366DEC2AAD1119008C3316 /* AddMemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA366DEB2AAD1119008C3316 /* AddMemberView.swift */; };
 		DA366DEE2AAD1418008C3316 /* AddPaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA366DED2AAD1418008C3316 /* AddPaymentView.swift */; };
+		DA3E05962AB30EF900E30336 /* OwingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3E05952AB30EF900E30336 /* OwingRow.swift */; };
 		DA58D0962AAB607F0094DC4E /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58D0952AAB607F0094DC4E /* SignupViewModel.swift */; };
 		DA58D0992AABA4F50094DC4E /* ColorOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58D0982AABA4F50094DC4E /* ColorOption.swift */; };
-		DA58D09B2AAC5C280094DC4E /* SymbolOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58D09A2AAC5C280094DC4E /* SymbolOption.swift */; };
 		DA58D09D2AAC5CC00094DC4E /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58D09C2AAC5CC00094DC4E /* Group.swift */; };
 		DA58D0A42AAC65220094DC4E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58D0A32AAC65220094DC4E /* SettingsView.swift */; };
-		DA58D0A62AAC74C00094DC4E /* ConnectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58D0A52AAC74C00094DC4E /* ConnectView.swift */; };
 		DA58D0AC2AAC7A310094DC4E /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58D0AB2AAC7A310094DC4E /* DetailView.swift */; };
 		DA58FE2F2AAA6D93002FF8DD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58FE2E2AAA6D93002FF8DD /* HomeView.swift */; };
 		DA58FE312AAB4ADB002FF8DD /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58FE302AAB4ADB002FF8DD /* TabBarView.swift */; };
@@ -30,6 +30,10 @@
 		DA933A1E2AB0A3E200C7712B /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA933A1D2AB0A3E200C7712B /* ProfileViewModel.swift */; };
 		DA933A202AB0C0CF00C7712B /* WalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA933A1F2AB0C0CF00C7712B /* WalletViewModel.swift */; };
 		DA933A222AB0C97D00C7712B /* ChooseProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA933A212AB0C97D00C7712B /* ChooseProfileView.swift */; };
+		DA933A242AB0F7DF00C7712B /* ChooseProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA933A232AB0F7DF00C7712B /* ChooseProfileViewModel.swift */; };
+		DA933A262AB0FD9700C7712B /* AddGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA933A252AB0FD9700C7712B /* AddGroupView.swift */; };
+		DA933A282AB1000800C7712B /* ChooseGroupImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA933A272AB1000800C7712B /* ChooseGroupImageView.swift */; };
+		DA933A2A2AB10E1600C7712B /* GroupDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA933A292AB10E1600C7712B /* GroupDataViewModel.swift */; };
 		DA9CA5C72AAA259F00B0C271 /* DivifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9CA5C62AAA259F00B0C271 /* DivifyApp.swift */; };
 		DA9CA5C92AAA259F00B0C271 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9CA5C82AAA259F00B0C271 /* ContentView.swift */; };
 		DA9CA5CB2AAA25A100B0C271 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA9CA5CA2AAA25A100B0C271 /* Assets.xcassets */; };
@@ -49,19 +53,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA29DF352AB1B2BA009E18B0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		DA366DDF2AACE369008C3316 /* ActivityRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRow.swift; sourceTree = "<group>"; };
 		DA366DE32AACF19E008C3316 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		DA366DE52AACF537008C3316 /* MemberRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRow.swift; sourceTree = "<group>"; };
 		DA366DE72AAD02E6008C3316 /* PaymentRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentRow.swift; sourceTree = "<group>"; };
-		DA366DE92AAD02F7008C3316 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
+		DA366DE92AAD02F7008C3316 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		DA366DEB2AAD1119008C3316 /* AddMemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberView.swift; sourceTree = "<group>"; };
 		DA366DED2AAD1418008C3316 /* AddPaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaymentView.swift; sourceTree = "<group>"; };
+		DA3E05952AB30EF900E30336 /* OwingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwingRow.swift; sourceTree = "<group>"; };
 		DA58D0952AAB607F0094DC4E /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		DA58D0982AABA4F50094DC4E /* ColorOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorOption.swift; sourceTree = "<group>"; };
-		DA58D09A2AAC5C280094DC4E /* SymbolOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolOption.swift; sourceTree = "<group>"; };
 		DA58D09C2AAC5CC00094DC4E /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		DA58D0A32AAC65220094DC4E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		DA58D0A52AAC74C00094DC4E /* ConnectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectView.swift; sourceTree = "<group>"; };
 		DA58D0AB2AAC7A310094DC4E /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		DA58FE2E2AAA6D93002FF8DD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		DA58FE302AAB4ADB002FF8DD /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
@@ -71,6 +75,10 @@
 		DA933A1D2AB0A3E200C7712B /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		DA933A1F2AB0C0CF00C7712B /* WalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewModel.swift; sourceTree = "<group>"; };
 		DA933A212AB0C97D00C7712B /* ChooseProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseProfileView.swift; sourceTree = "<group>"; };
+		DA933A232AB0F7DF00C7712B /* ChooseProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseProfileViewModel.swift; sourceTree = "<group>"; };
+		DA933A252AB0FD9700C7712B /* AddGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGroupView.swift; sourceTree = "<group>"; };
+		DA933A272AB1000800C7712B /* ChooseGroupImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseGroupImageView.swift; sourceTree = "<group>"; };
+		DA933A292AB10E1600C7712B /* GroupDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDataViewModel.swift; sourceTree = "<group>"; };
 		DA9CA5C32AAA259F00B0C271 /* Divify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Divify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA9CA5C62AAA259F00B0C271 /* DivifyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivifyApp.swift; sourceTree = "<group>"; };
 		DA9CA5C82AAA259F00B0C271 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -109,8 +117,7 @@
 				DA58D0982AABA4F50094DC4E /* ColorOption.swift */,
 				DA58D09C2AAC5CC00094DC4E /* Group.swift */,
 				DA366DE32AACF19E008C3316 /* Member.swift */,
-				DA366DE92AAD02F7008C3316 /* Payment.swift */,
-				DA58D09A2AAC5C280094DC4E /* SymbolOption.swift */,
+				DA366DE92AAD02F7008C3316 /* Expense.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -119,12 +126,15 @@
 			isa = PBXGroup;
 			children = (
 				DA366DEB2AAD1119008C3316 /* AddMemberView.swift */,
+				DA933A252AB0FD9700C7712B /* AddGroupView.swift */,
 				DA366DED2AAD1418008C3316 /* AddPaymentView.swift */,
+				DA933A272AB1000800C7712B /* ChooseGroupImageView.swift */,
 				DAE27B792AACE10A00EC665A /* GroupDetailView.swift */,
 				DAE27B752AAC9D2A00EC665A /* GroupHomeRow.swift */,
 				DA58FE2E2AAA6D93002FF8DD /* HomeView.swift */,
 				DA366DE52AACF537008C3316 /* MemberRow.swift */,
 				DA366DE72AAD02E6008C3316 /* PaymentRow.swift */,
+				DA3E05952AB30EF900E30336 /* OwingRow.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -142,7 +152,6 @@
 			isa = PBXGroup;
 			children = (
 				DA933A212AB0C97D00C7712B /* ChooseProfileView.swift */,
-				DA58D0A52AAC74C00094DC4E /* ConnectView.swift */,
 				DA58D0AB2AAC7A310094DC4E /* DetailView.swift */,
 				DA58FE362AAB4B1C002FF8DD /* ProfileView.swift */,
 				DA58D0A32AAC65220094DC4E /* SettingsView.swift */,
@@ -181,8 +190,8 @@
 			isa = PBXGroup;
 			children = (
 				DA58D0972AABA4E50094DC4E /* Models */,
-				DA9CA5E12AAA373100B0C271 /* ViewModels */,
 				DA9CA5E02AAA372600B0C271 /* Views */,
+				DA9CA5E12AAA373100B0C271 /* ViewModels */,
 				DA9CA5C82AAA259F00B0C271 /* ContentView.swift */,
 				DA58FE302AAB4ADB002FF8DD /* TabBarView.swift */,
 				DA9CA5C62AAA259F00B0C271 /* DivifyApp.swift */,
@@ -216,11 +225,14 @@
 		DA9CA5E12AAA373100B0C271 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				DA933A232AB0F7DF00C7712B /* ChooseProfileViewModel.swift */,
 				DA933A1B2AB0A30800C7712B /* DetailViewModel.swift */,
+				DA933A292AB10E1600C7712B /* GroupDataViewModel.swift */,
 				DA9CA5E42AAA3B9900B0C271 /* LoginViewModel.swift */,
 				DA933A1D2AB0A3E200C7712B /* ProfileViewModel.swift */,
 				DA58D0952AAB607F0094DC4E /* SignupViewModel.swift */,
 				DA933A1F2AB0C0CF00C7712B /* WalletViewModel.swift */,
+				DA29DF352AB1B2BA009E18B0 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -307,8 +319,7 @@
 			files = (
 				DA58D0A42AAC65220094DC4E /* SettingsView.swift in Sources */,
 				DA366DE82AAD02E6008C3316 /* PaymentRow.swift in Sources */,
-				DA366DEA2AAD02F7008C3316 /* Payment.swift in Sources */,
-				DA58D0A62AAC74C00094DC4E /* ConnectView.swift in Sources */,
+				DA366DEA2AAD02F7008C3316 /* Expense.swift in Sources */,
 				DA933A222AB0C97D00C7712B /* ChooseProfileView.swift in Sources */,
 				DAE27B762AAC9D2A00EC665A /* GroupHomeRow.swift in Sources */,
 				DA933A202AB0C0CF00C7712B /* WalletViewModel.swift in Sources */,
@@ -316,19 +327,23 @@
 				DA9CA5C92AAA259F00B0C271 /* ContentView.swift in Sources */,
 				DA366DEE2AAD1418008C3316 /* AddPaymentView.swift in Sources */,
 				DA9CA5D32AAA25A100B0C271 /* Divify.xcdatamodeld in Sources */,
+				DA29DF362AB1B2BA009E18B0 /* HomeViewModel.swift in Sources */,
 				DA58FE372AAB4B1C002FF8DD /* ProfileView.swift in Sources */,
 				DAE27B7A2AACE10A00EC665A /* GroupDetailView.swift in Sources */,
+				DA933A262AB0FD9700C7712B /* AddGroupView.swift in Sources */,
 				DA366DE42AACF19E008C3316 /* Member.swift in Sources */,
 				DA933A1E2AB0A3E200C7712B /* ProfileViewModel.swift in Sources */,
 				DA58FE332AAB4B0E002FF8DD /* ActivityView.swift in Sources */,
 				DA933A1C2AB0A30800C7712B /* DetailViewModel.swift in Sources */,
-				DA58D09B2AAC5C280094DC4E /* SymbolOption.swift in Sources */,
+				DA933A242AB0F7DF00C7712B /* ChooseProfileViewModel.swift in Sources */,
+				DA933A282AB1000800C7712B /* ChooseGroupImageView.swift in Sources */,
 				DA58FE312AAB4ADB002FF8DD /* TabBarView.swift in Sources */,
 				DA58D09D2AAC5CC00094DC4E /* Group.swift in Sources */,
 				DA9DFDD62AAC81D900E5625A /* WalletView.swift in Sources */,
 				DA58D0962AAB607F0094DC4E /* SignupViewModel.swift in Sources */,
 				DA58D0992AABA4F50094DC4E /* ColorOption.swift in Sources */,
 				DA366DEC2AAD1119008C3316 /* AddMemberView.swift in Sources */,
+				DA933A2A2AB10E1600C7712B /* GroupDataViewModel.swift in Sources */,
 				DAE27B782AACA1B600EC665A /* Activity.swift in Sources */,
 				DA366DE02AACE369008C3316 /* ActivityRow.swift in Sources */,
 				DA9CA5E32AAA374100B0C271 /* LoginView.swift in Sources */,
@@ -336,6 +351,7 @@
 				DA9DFDD42AAC81BF00E5625A /* ScanCodeView.swift in Sources */,
 				DA9CA5E52AAA3B9900B0C271 /* LoginViewModel.swift in Sources */,
 				DA9CA5C72AAA259F00B0C271 /* DivifyApp.swift in Sources */,
+				DA3E05962AB30EF900E30336 /* OwingRow.swift in Sources */,
 				DA366DE62AACF537008C3316 /* MemberRow.swift in Sources */,
 				DA9DFDD22AAC81A800E5625A /* TransactionView.swift in Sources */,
 			);

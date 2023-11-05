@@ -1,29 +1,27 @@
 import SwiftUI
+import Firebase
 
 struct AddMemberView: View {
     @Binding var group: ExpenseGroup
-
-    @State private var profileImage: String = ""
     @State private var memberName: String = ""
-    
     @Environment(\.presentationMode) var presentationMode
+    
+    @ObservedObject var profileViewModel = ProfileViewModel()
+    
+    var db = Firestore.firestore()
 
     var body: some View {
         NavigationView {
             List {
-                Section("Add a member") {
-                    TextField("Profile Image Name", text: $profileImage)
-                        .disableAutocorrection(true)
-                }
-                
-                Section("Add a name") {
-                    TextField("Member Name", text: $memberName)
+                Section("Add user id") {
+                    TextField("User ID", text: $memberName)
                         .disableAutocorrection(true)
                 }
                 
                 Button {
-                    let newMember = Member(profileImage: profileImage, name: memberName)
+                    let newMember = Member(profileImage: profileViewModel.profileImage, name: memberName, previewName: profileViewModel.userName, owedAmount: 0, hasPaid: false)
                     group.members.append(newMember)
+                    addMemberToFirebase(member: newMember)
                     presentationMode.wrappedValue.dismiss()
                 } label: {
                     Text("Add Member")
@@ -43,6 +41,24 @@ struct AddMemberView: View {
                     }
                 }
             }
+            .onAppear {
+                profileViewModel.fetchUsername()
+                profileViewModel.fetchProfileImage()
+            }
         }
+    }
+    
+    func addMemberToFirebase(member: Member) {
+        let memberData: [String: Any] = [
+            "uid": member.name,
+            "previewName": member.previewName
+        ]
+        
+        guard !group.id.isEmpty else {
+            print("Invalid Group ID provided.")
+            return
+        }
+        
+        db.collection("groups").document(group.id).collection("members").addDocument(data: memberData)
     }
 }

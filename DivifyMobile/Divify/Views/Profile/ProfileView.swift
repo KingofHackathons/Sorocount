@@ -57,7 +57,7 @@ struct ProfileView: View {
                     }
                     
                     NavigationLink {
-                        DetailView(userName: $viewModel.userName)
+                        DetailView(userName: $viewModel.userName, profileImage: $viewModel.profileImage)
                     } label: {
                         Label("Details", systemImage: "info.circle")
                     }

@@ -2,7 +2,7 @@ import SwiftUI
 
 struct PaymentRow: View {
     
-    var payment: Payment
+    var expense: Expense
     
     var body: some View {
         HStack(spacing: 12) {
@@ -11,18 +11,18 @@ struct PaymentRow: View {
                 .scaledToFit()
             .frame(width: 18, height: 18)
             
-            Text(payment.title)
+            VStack(alignment: .leading, spacing: 4) {
+                Text(expense.title)
+                
+                Text(expense.previewName)
+                    .font(.caption)
+            }
             
             Spacer()
             
-            Text("\(payment.amount) XLM")
+            Text("\(expense.amount, specifier: "US$ %.2f")")
                 .bold()
         }
     }
 }
 
-//struct PaymentRow_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PaymentRow(payment: payments[0])
-//    }
-//}

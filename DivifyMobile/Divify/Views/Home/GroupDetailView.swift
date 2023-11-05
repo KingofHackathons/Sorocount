@@ -8,6 +8,9 @@ struct GroupDetailView: View {
     @State private var isAddingMember = false
     @State private var isAddingPayment = false
     
+    @ObservedObject var groupDataViewModel = GroupDataViewModel()
+    @ObservedObject var profileViewModel = ProfileViewModel()
+    
     var body: some View {
         List {
             Section(header: Text("Overview")) {
@@ -26,7 +29,7 @@ struct GroupDetailView: View {
                         HStack(alignment: .top, spacing: 4) {
                             Text("You owe")
                             
-                            Text("\(group.owedAmount) XLM")
+                            Text("\(group.owedAmount, specifier: "US$ %.2f")")
                                 .fontWeight(.semibold)
                         }
                     }
@@ -57,25 +60,25 @@ struct GroupDetailView: View {
                 }
                 
                 HStack(alignment: .bottom) {
-                    Text("Payments")
+                    Text("Expenses")
                         .fontWeight(.bold)
                     
                     Spacer()
                     
-                    if group.payments.count >= 1 {
-                        Text("Total: \(group.payments.count)")
+                    if group.expenses.count >= 1 {
+                        Text("Total: \(group.expenses.count)")
                             .font(.caption)
                     } else {
-                        Text("Error")
+                        Text("No Expenses Yet")
                     }
                 }
                 
-                ForEach(group.payments) { payment in
-                    PaymentRow(payment: payment)
+                ForEach(group.expenses) { expense in
+                    PaymentRow(expense: expense)
                         .swipeActions {
                             Button(role: .destructive) {
-                                if let index = group.payments.firstIndex(where: { $0.id == payment.id }) {
-                                    group.payments.remove(at: index)
+                                if let index = group.expenses.firstIndex(where: { $0.id == expense.id }) {
+                                    group.expenses.remove(at: index)
                                 }
                             } label: {
                                 Label("Delete", systemImage: "trash")
@@ -86,12 +89,18 @@ struct GroupDetailView: View {
                 Button {
                     isAddingPayment.toggle()
                 } label: {
-                    Label("Add Payment", systemImage: "plus")
+                    Label("Add Expense", systemImage: "plus")
                 }
             }
             
             Section(header: Text("Transactions")) {
-                
+                ForEach(group.members) { member in
+                    if member.previewName == profileViewModel.userName {
+                        
+                    } else {
+                        OwingRow(member: member)
+                    }
+                }
             }
         }
         .navigationTitle("Group")
@@ -100,14 +109,12 @@ struct GroupDetailView: View {
             AddMemberView(group: $group)
         }
         .sheet(isPresented: $isAddingPayment) {
-            AddPaymentView(group: $group)
+            groupDataViewModel.fetchGroups()
+        } content: {
+            AddExpenseView(group: $group)
         }
-        
+        .onAppear {
+            profileViewModel.fetchUsername()
+        }
     }
 }
-
-//struct GroupDetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        GroupDetailView(group: .constant(ExpenseGroup.example))
-//    }
-//}

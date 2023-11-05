@@ -1,18 +1,24 @@
 import SwiftUI
+import Firebase
 
-struct AddPaymentView: View {
+struct AddExpenseView: View {
     @Binding var group: ExpenseGroup
 
-    @State private var paymentName: String = ""
-    @State private var amount: String = ""
+    @State var expenseName: String = ""
+    @State var amount: String = ""
     
     @Environment(\.presentationMode) var presentationMode
+    
+    @ObservedObject var groupDataViewModel = GroupDataViewModel()
+    @ObservedObject var profileViewModel = ProfileViewModel()
+    
+    var db = Firestore.firestore()
     
     var body: some View {
         NavigationView {
             List {
-                Section("Add a payment") {
-                    TextField("Name your payment", text: $paymentName)
+                Section("Add an expense") {
+                    TextField("Name your payment", text: $expenseName)
                         .disableAutocorrection(true)
                 }
                 
@@ -23,21 +29,23 @@ struct AddPaymentView: View {
                 }
                 
                 Button {
-                    if let intAmount = Int(amount) {
-                        let newPayment = Payment(title: paymentName, amount: intAmount)
-                        group.payments.append(newPayment)
+                    if let doubleAmount = Double(amount) {
+                        let newExpense = Expense(title: expenseName, amount: doubleAmount, previewName: profileViewModel.userName, author: Auth.auth().currentUser?.uid ?? "Unknown UID")
+                        group.expenses.append(newExpense)
+                        addPaymentToFirebase(expense: newExpense)
+                        
                         presentationMode.wrappedValue.dismiss()
+                    
                     } else {
-                        print("Something went wrong with the the amount")
+                        print("Something went wrong with the amount")
                     }
                 } label: {
-                    Text("Add Payment")
+                    Text("Add Expense")
                         .bold()
-                    
                 }
                 .hCenter()
             }
-            .navigationTitle("Add a Payment")
+            .navigationTitle("Add an Expense")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem {
@@ -49,12 +57,25 @@ struct AddPaymentView: View {
                     }
                 }
             }
+            .onAppear {
+                profileViewModel.fetchUsername()
+            }
         }
     }
+    
+    func addPaymentToFirebase(expense: Expense) {
+        let paymentData: [String: Any] = [
+            "title": expense.title,
+            "amount": expense.amount,
+            "previewName": expense.previewName,
+            "uid": expense.author
+        ]
+        
+        guard !group.id.isEmpty else {
+            print("Invalid Group ID provided.")
+            return
+        }
+        
+        db.collection("groups").document(group.id).collection("payments").addDocument(data: paymentData)
+    }
 }
-
-//struct AddPaymentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AddPaymentView()
-//    }
-//}

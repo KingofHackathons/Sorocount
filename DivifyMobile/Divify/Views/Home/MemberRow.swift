@@ -12,7 +12,7 @@ struct MemberRow: View {
                 .frame(width: 28, height: 28)
                 .cornerRadius(50)
             
-            Text(member.name)
+            Text(member.previewName)
         }
     }
 }

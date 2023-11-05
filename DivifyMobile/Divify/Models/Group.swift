@@ -2,46 +2,47 @@ import SwiftUI
 import Foundation
 
 class ExpenseGroup: Identifiable, ObservableObject {
-    var id = UUID()
+    var id: String = ""
     var image: String = ""
     var title: String = ""
-    @Published var payments: [Payment]
+    @Published var expenses: [Expense]
     @Published var members: [Member]
     
-    var totalAmount: Int {
-        return payments.reduce(0) { $0 + $1.amount }
+    var totalAmount: Double {
+        return expenses.reduce(0) { $0 + $1.amount }
     }
     
-    var owedAmount: Int {
-        return totalAmount / 3
+    var owedAmount: Double {
+        if members.count == 0 {
+            return 0
+        }
+        return totalAmount / Double(members.count)
     }
     
-    init(image: String = "",
-         title: String = "",
-         payments: [Payment] = [Payment(title: "", amount: 0)],
-         members: [Member] = [Member(profileImage: "", name: "")]) {
+    init(id: String = UUID().uuidString, image: String = "", title: String = "", expenses: [Expense] = [], members: [Member] = []) {
+        self.id = id
         self.image = image
         self.title = title
-        self.payments = payments
+        self.expenses = expenses
         self.members = members
     }
 }
 
 class GroupData: Identifiable, ObservableObject {
     @Published var groups: [ExpenseGroup] = [
-        ExpenseGroup(image: "andrew", title: "London Monkeys", payments: [
-                        Payment(title: "Uber ride to Oxford", amount: 12),
-                        Payment(title: "Cheeseburgers at the airport", amount: 831)
+        ExpenseGroup(image: "group1", title: "London Monkeys", expenses: [
+            Expense(title: "Uber ride to Oxford", amount: 12, previewName: "Huh?", author: "Desean"),
+            Expense(title: "Cheeseburgers at the airport", amount: 831, previewName: "Huh?", author: "Izzy")
                     ], members: [
-                        Member(profileImage: "nkoorty", name: "Artemiy"),
-                        Member(profileImage: "jeevan", name: "Jeevan")
+                        Member(profileImage: "nkoorty", name: "Artemiy", previewName: "Art", owedAmount: 512, hasPaid: false),
+                        Member(profileImage: "jeevan", name: "Jeevan", previewName: "Art", owedAmount: 512, hasPaid: true)
                     ]),
-        ExpenseGroup(image: "rishi", title: "Mexico Monkeys", payments: [
-                        Payment(title: "Uber ride to Oxford", amount: 12),
-                        Payment(title: "Cheeseburgers at the airport", amount: 831)
+        ExpenseGroup(image: "group2", title: "Mexico Monkeys", expenses: [
+            Expense(title: "Uber ride to Oxford", amount: 12, previewName: "Huh?", author: "JJ"),
+            Expense(title: "Cheeseburgers at the airport", amount: 831, previewName: "Huh?", author: "Monke")
                     ], members: [
-                        Member(profileImage: "nkoorty", name: "Artemiy"),
-                        Member(profileImage: "jeevan", name: "Jeevan")
+                        Member(profileImage: "nkoorty", name: "Artemiy", previewName: "Art", owedAmount: 512, hasPaid: true),
+                        Member(profileImage: "jeevan", name: "Jeevan", previewName: "Art", owedAmount: 512, hasPaid: false)
                     ])
     ]
     

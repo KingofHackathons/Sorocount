@@ -51,6 +51,17 @@ struct WalletView: View {
                     )
                     .environment(\.isEnabled, true)
             }
+            
+            Section("Generate new keys") {
+                Button {
+                    
+                } label: {
+                    Text("Generate keys")
+                        .bold()
+                }
+                .hCenter()
+
+            }
         }
         .navigationTitle("Wallet")
         .navigationBarTitleDisplayMode(.inline)

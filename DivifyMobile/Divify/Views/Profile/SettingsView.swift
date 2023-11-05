@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 import Firebase
 
 struct SettingsView: View {
@@ -7,13 +8,25 @@ struct SettingsView: View {
         return Auth.auth().currentUser?.email
     }
     
+    var uid: String? {
+        return Auth.auth().currentUser?.uid
+    }
+    
     @AppStorage("log_status") var logStatus: Bool = false
     
     var body: some View {
         List {
             Section(header: Text("Account Info")) {
                 if let email = userEmail {
-                    Text(email)
+                    CopyableText(text: email)
+                } else {
+                    Text("Not signed in")
+                }
+            }
+            
+            Section(header: Text("User ID")) {
+                if let userId = uid {
+                    CopyableText(text: userId)
                 } else {
                     Text("Not signed in")
                 }
@@ -35,6 +48,22 @@ struct SettingsView: View {
         }
         .navigationTitle("Settings")
         .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct CopyableText: UIViewRepresentable {
+    var text: String
+    
+    func makeUIView(context: Context) -> UITextField {
+        let textField = UITextField()
+        textField.isUserInteractionEnabled = true
+        textField.borderStyle = .none
+        textField.backgroundColor = .clear
+        return textField
+    }
+    
+    func updateUIView(_ uiView: UITextField, context: Context) {
+        uiView.text = text
     }
 }
 

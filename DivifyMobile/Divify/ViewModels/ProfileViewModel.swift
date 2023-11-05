@@ -7,6 +7,7 @@ class ProfileViewModel: ObservableObject {
     
     @Published var userName: String = ""
     @Published var profileImage: String = ""
+    @Published var totalAmountOwed: Double = 0
     @Published var publicKey: String = ""
     @Published var secretSeed: String = ""
     @Published var error: String?
@@ -16,7 +17,7 @@ class ProfileViewModel: ObservableObject {
             error = "No authenticated user found."
             return
         }
-        
+
         db.collection("users").document(uid).getDocument { (document, err) in
             if let document = document, document.exists, let data = document.data() {
                 self.userName = data["userName"] as? String ?? "Default Username"
@@ -35,6 +36,21 @@ class ProfileViewModel: ObservableObject {
         db.collection("users").document(uid).getDocument { (document, err) in
             if let document = document, document.exists, let data = document.data() {
                 self.profileImage = data["profileImage"] as? String ?? "Default Profile Image"
+            } else {
+                self.error = "Document does not exist or error fetching."
+            }
+        }
+    }
+    
+    func fetchTotalAmountOwed() {
+        guard let uid = Auth.auth().currentUser?.uid else {
+            error = "No authenticated user found."
+            return
+        }
+        
+        db.collection("users").document(uid).getDocument { (document, err) in
+            if let document = document, document.exists, let data = document.data() {
+                self.totalAmountOwed = data["totalAmountOwed"] as? Double ?? 0
             } else {
                 self.error = "Document does not exist or error fetching."
             }
