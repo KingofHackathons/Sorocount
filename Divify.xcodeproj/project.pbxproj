@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA366DE02AACE369008C3316 /* ActivityRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA366DDF2AACE369008C3316 /* ActivityRow.swift */; };
+		DA366DE22AACE8DE008C3316 /* GroupEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA366DE12AACE8DE008C3316 /* GroupEditor.swift */; };
+		DA366DE42AACF19E008C3316 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA366DE32AACF19E008C3316 /* Member.swift */; };
+		DA366DE62AACF537008C3316 /* MemberRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA366DE52AACF537008C3316 /* MemberRow.swift */; };
+		DA366DE82AAD02E6008C3316 /* PaymentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA366DE72AAD02E6008C3316 /* PaymentRow.swift */; };
+		DA366DEA2AAD02F7008C3316 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA366DE92AAD02F7008C3316 /* Payment.swift */; };
+		DA366DEC2AAD1119008C3316 /* AddMemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA366DEB2AAD1119008C3316 /* AddMemberView.swift */; };
+		DA366DEE2AAD1418008C3316 /* AddPaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA366DED2AAD1418008C3316 /* AddPaymentView.swift */; };
+		DA58D0962AAB607F0094DC4E /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58D0952AAB607F0094DC4E /* SignupViewModel.swift */; };
+		DA58D0992AABA4F50094DC4E /* ColorOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58D0982AABA4F50094DC4E /* ColorOption.swift */; };
+		DA58D09B2AAC5C280094DC4E /* SymbolOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58D09A2AAC5C280094DC4E /* SymbolOption.swift */; };
+		DA58D09D2AAC5CC00094DC4E /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58D09C2AAC5CC00094DC4E /* Group.swift */; };
+		DA58D0A42AAC65220094DC4E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58D0A32AAC65220094DC4E /* SettingsView.swift */; };
+		DA58D0A62AAC74C00094DC4E /* ConnectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58D0A52AAC74C00094DC4E /* ConnectView.swift */; };
+		DA58D0AC2AAC7A310094DC4E /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58D0AB2AAC7A310094DC4E /* DetailView.swift */; };
+		DA58FE2F2AAA6D93002FF8DD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58FE2E2AAA6D93002FF8DD /* HomeView.swift */; };
+		DA58FE312AAB4ADB002FF8DD /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58FE302AAB4ADB002FF8DD /* TabBarView.swift */; };
+		DA58FE332AAB4B0E002FF8DD /* GroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58FE322AAB4B0E002FF8DD /* GroupsView.swift */; };
+		DA58FE372AAB4B1C002FF8DD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58FE362AAB4B1C002FF8DD /* ProfileView.swift */; };
+		DA58FE3D2AAB4FEC002FF8DD /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = DA58FE3C2AAB4FEC002FF8DD /* AlertToast */; };
+		DA9CA5C72AAA259F00B0C271 /* DivifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9CA5C62AAA259F00B0C271 /* DivifyApp.swift */; };
+		DA9CA5C92AAA259F00B0C271 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9CA5C82AAA259F00B0C271 /* ContentView.swift */; };
+		DA9CA5CB2AAA25A100B0C271 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA9CA5CA2AAA25A100B0C271 /* Assets.xcassets */; };
+		DA9CA5CE2AAA25A100B0C271 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA9CA5CD2AAA25A100B0C271 /* Preview Assets.xcassets */; };
+		DA9CA5D32AAA25A100B0C271 /* Divify.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA9CA5D12AAA25A100B0C271 /* Divify.xcdatamodeld */; };
+		DA9CA5DB2AAA337B00B0C271 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DA9CA5DA2AAA337B00B0C271 /* FirebaseAuth */; };
+		DA9CA5DD2AAA337B00B0C271 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DA9CA5DC2AAA337B00B0C271 /* FirebaseFirestore */; };
+		DA9CA5DF2AAA360600B0C271 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA9CA5DE2AAA360600B0C271 /* GoogleService-Info.plist */; };
+		DA9CA5E32AAA374100B0C271 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9CA5E22AAA374100B0C271 /* LoginView.swift */; };
+		DA9CA5E52AAA3B9900B0C271 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9CA5E42AAA3B9900B0C271 /* LoginViewModel.swift */; };
+		DA9DFDD22AAC81A800E5625A /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9DFDD12AAC81A800E5625A /* TransactionView.swift */; };
+		DA9DFDD42AAC81BF00E5625A /* ScanCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9DFDD32AAC81BF00E5625A /* ScanCodeView.swift */; };
+		DA9DFDD62AAC81D900E5625A /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9DFDD52AAC81D900E5625A /* WalletView.swift */; };
+		DAE27B762AAC9D2A00EC665A /* GroupHomeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE27B752AAC9D2A00EC665A /* GroupHomeRow.swift */; };
+		DAE27B782AACA1B600EC665A /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE27B772AACA1B600EC665A /* Activity.swift */; };
+		DAE27B7A2AACE10A00EC665A /* GroupDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE27B792AACE10A00EC665A /* GroupDetailView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DA366DDF2AACE369008C3316 /* ActivityRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRow.swift; sourceTree = "<group>"; };
+		DA366DE12AACE8DE008C3316 /* GroupEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupEditor.swift; sourceTree = "<group>"; };
+		DA366DE32AACF19E008C3316 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		DA366DE52AACF537008C3316 /* MemberRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRow.swift; sourceTree = "<group>"; };
+		DA366DE72AAD02E6008C3316 /* PaymentRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentRow.swift; sourceTree = "<group>"; };
+		DA366DE92AAD02F7008C3316 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
+		DA366DEB2AAD1119008C3316 /* AddMemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberView.swift; sourceTree = "<group>"; };
+		DA366DED2AAD1418008C3316 /* AddPaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaymentView.swift; sourceTree = "<group>"; };
+		DA58D0952AAB607F0094DC4E /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		DA58D0982AABA4F50094DC4E /* ColorOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorOption.swift; sourceTree = "<group>"; };
+		DA58D09A2AAC5C280094DC4E /* SymbolOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolOption.swift; sourceTree = "<group>"; };
+		DA58D09C2AAC5CC00094DC4E /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		DA58D0A32AAC65220094DC4E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		DA58D0A52AAC74C00094DC4E /* ConnectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectView.swift; sourceTree = "<group>"; };
+		DA58D0AB2AAC7A310094DC4E /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		DA58FE2E2AAA6D93002FF8DD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DA58FE302AAB4ADB002FF8DD /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		DA58FE322AAB4B0E002FF8DD /* GroupsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsView.swift; sourceTree = "<group>"; };
+		DA58FE362AAB4B1C002FF8DD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		DA9CA5C32AAA259F00B0C271 /* Divify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Divify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA9CA5C62AAA259F00B0C271 /* DivifyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivifyApp.swift; sourceTree = "<group>"; };
+		DA9CA5C82AAA259F00B0C271 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DA9CA5CA2AAA25A100B0C271 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DA9CA5CD2AAA25A100B0C271 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DA9CA5D22AAA25A100B0C271 /* Divify.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Divify.xcdatamodel; sourceTree = "<group>"; };
+		DA9CA5DE2AAA360600B0C271 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DA9CA5E22AAA374100B0C271 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		DA9CA5E42AAA3B9900B0C271 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		DA9DFDD12AAC81A800E5625A /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
+		DA9DFDD32AAC81BF00E5625A /* ScanCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCodeView.swift; sourceTree = "<group>"; };
+		DA9DFDD52AAC81D900E5625A /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
+		DAE27B752AAC9D2A00EC665A /* GroupHomeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupHomeRow.swift; sourceTree = "<group>"; };
+		DAE27B772AACA1B600EC665A /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		DAE27B792AACE10A00EC665A /* GroupDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA9CA5C02AAA259F00B0C271 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA58FE3D2AAB4FEC002FF8DD /* AlertToast in Frameworks */,
+				DA9CA5DB2AAA337B00B0C271 /* FirebaseAuth in Frameworks */,
+				DA9CA5DD2AAA337B00B0C271 /* FirebaseFirestore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DA58D0972AABA4E50094DC4E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DA58D0982AABA4F50094DC4E /* ColorOption.swift */,
+				DA58D09A2AAC5C280094DC4E /* SymbolOption.swift */,
+				DA58D09C2AAC5CC00094DC4E /* Group.swift */,
+				DAE27B772AACA1B600EC665A /* Activity.swift */,
+				DA366DE32AACF19E008C3316 /* Member.swift */,
+				DA366DE92AAD02F7008C3316 /* Payment.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DA58D0A72AAC752B0094DC4E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DA58FE2E2AAA6D93002FF8DD /* HomeView.swift */,
+				DAE27B752AAC9D2A00EC665A /* GroupHomeRow.swift */,
+				DA366DDF2AACE369008C3316 /* ActivityRow.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DA58D0A82AAC75320094DC4E /* Groups */ = {
+			isa = PBXGroup;
+			children = (
+				DA366DEB2AAD1119008C3316 /* AddMemberView.swift */,
+				DA366DED2AAD1418008C3316 /* AddPaymentView.swift */,
+				DAE27B792AACE10A00EC665A /* GroupDetailView.swift */,
+				DA58FE322AAB4B0E002FF8DD /* GroupsView.swift */,
+				DA366DE12AACE8DE008C3316 /* GroupEditor.swift */,
+				DA366DE52AACF537008C3316 /* MemberRow.swift */,
+				DA366DE72AAD02E6008C3316 /* PaymentRow.swift */,
+			);
+			path = Groups;
+			sourceTree = "<group>";
+		};
+		DA58D0A92AAC753D0094DC4E /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				DA58D0A52AAC74C00094DC4E /* ConnectView.swift */,
+				DA58FE362AAB4B1C002FF8DD /* ProfileView.swift */,
+				DA58D0A32AAC65220094DC4E /* SettingsView.swift */,
+				DA58D0AB2AAC7A310094DC4E /* DetailView.swift */,
+				DA9DFDD12AAC81A800E5625A /* TransactionView.swift */,
+				DA9DFDD32AAC81BF00E5625A /* ScanCodeView.swift */,
+				DA9DFDD52AAC81D900E5625A /* WalletView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		DA58D0AA2AAC75590094DC4E /* LoginSignup */ = {
+			isa = PBXGroup;
+			children = (
+				DA9CA5E22AAA374100B0C271 /* LoginView.swift */,
+			);
+			path = LoginSignup;
+			sourceTree = "<group>";
+		};
+		DA9CA5BA2AAA259F00B0C271 = {
+			isa = PBXGroup;
+			children = (
+				DA9CA5C52AAA259F00B0C271 /* Divify */,
+				DA9CA5C42AAA259F00B0C271 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DA9CA5C42AAA259F00B0C271 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA9CA5C32AAA259F00B0C271 /* Divify.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA9CA5C52AAA259F00B0C271 /* Divify */ = {
+			isa = PBXGroup;
+			children = (
+				DA58D0972AABA4E50094DC4E /* Model */,
+				DA9CA5E12AAA373100B0C271 /* ViewModel */,
+				DA9CA5E02AAA372600B0C271 /* View */,
+				DA9CA5DE2AAA360600B0C271 /* GoogleService-Info.plist */,
+				DA9CA5C62AAA259F00B0C271 /* DivifyApp.swift */,
+				DA9CA5C82AAA259F00B0C271 /* ContentView.swift */,
+				DA9CA5CA2AAA25A100B0C271 /* Assets.xcassets */,
+				DA9CA5D12AAA25A100B0C271 /* Divify.xcdatamodeld */,
+				DA9CA5CC2AAA25A100B0C271 /* Preview Content */,
+			);
+			path = Divify;
+			sourceTree = "<group>";
+		};
+		DA9CA5CC2AAA25A100B0C271 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DA9CA5CD2AAA25A100B0C271 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DA9CA5E02AAA372600B0C271 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DA58D0AA2AAC75590094DC4E /* LoginSignup */,
+				DA58D0A92AAC753D0094DC4E /* Profile */,
+				DA58D0A82AAC75320094DC4E /* Groups */,
+				DA58D0A72AAC752B0094DC4E /* Home */,
+				DA58FE302AAB4ADB002FF8DD /* TabBarView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DA9CA5E12AAA373100B0C271 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DA9CA5E42AAA3B9900B0C271 /* LoginViewModel.swift */,
+				DA58D0952AAB607F0094DC4E /* SignupViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA9CA5C22AAA259F00B0C271 /* Divify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA9CA5D62AAA25A100B0C271 /* Build configuration list for PBXNativeTarget "Divify" */;
+			buildPhases = (
+				DA9CA5BF2AAA259F00B0C271 /* Sources */,
+				DA9CA5C02AAA259F00B0C271 /* Frameworks */,
+				DA9CA5C12AAA259F00B0C271 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Divify;
+			packageProductDependencies = (
+				DA9CA5DA2AAA337B00B0C271 /* FirebaseAuth */,
+				DA9CA5DC2AAA337B00B0C271 /* FirebaseFirestore */,
+				DA58FE3C2AAB4FEC002FF8DD /* AlertToast */,
+			);
+			productName = Divify;
+			productReference = DA9CA5C32AAA259F00B0C271 /* Divify.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA9CA5BB2AAA259F00B0C271 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					DA9CA5C22AAA259F00B0C271 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = DA9CA5BE2AAA259F00B0C271 /* Build configuration list for PBXProject "Divify" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DA9CA5BA2AAA259F00B0C271;
+			packageReferences = (
+				DA9CA5D92AAA337B00B0C271 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				DA58FE3B2AAB4FEC002FF8DD /* XCRemoteSwiftPackageReference "AlertToast" */,
+			);
+			productRefGroup = DA9CA5C42AAA259F00B0C271 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA9CA5C22AAA259F00B0C271 /* Divify */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA9CA5C12AAA259F00B0C271 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA9CA5CE2AAA25A100B0C271 /* Preview Assets.xcassets in Resources */,
+				DA9CA5DF2AAA360600B0C271 /* GoogleService-Info.plist in Resources */,
+				DA9CA5CB2AAA25A100B0C271 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA9CA5BF2AAA259F00B0C271 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA58D0A42AAC65220094DC4E /* SettingsView.swift in Sources */,
+				DA366DE82AAD02E6008C3316 /* PaymentRow.swift in Sources */,
+				DA366DEA2AAD02F7008C3316 /* Payment.swift in Sources */,
+				DA58D0A62AAC74C00094DC4E /* ConnectView.swift in Sources */,
+				DAE27B762AAC9D2A00EC665A /* GroupHomeRow.swift in Sources */,
+				DA58D0AC2AAC7A310094DC4E /* DetailView.swift in Sources */,
+				DA9CA5C92AAA259F00B0C271 /* ContentView.swift in Sources */,
+				DA366DEE2AAD1418008C3316 /* AddPaymentView.swift in Sources */,
+				DA9CA5D32AAA25A100B0C271 /* Divify.xcdatamodeld in Sources */,
+				DA58FE372AAB4B1C002FF8DD /* ProfileView.swift in Sources */,
+				DAE27B7A2AACE10A00EC665A /* GroupDetailView.swift in Sources */,
+				DA366DE42AACF19E008C3316 /* Member.swift in Sources */,
+				DA58FE332AAB4B0E002FF8DD /* GroupsView.swift in Sources */,
+				DA58D09B2AAC5C280094DC4E /* SymbolOption.swift in Sources */,
+				DA58FE312AAB4ADB002FF8DD /* TabBarView.swift in Sources */,
+				DA58D09D2AAC5CC00094DC4E /* Group.swift in Sources */,
+				DA9DFDD62AAC81D900E5625A /* WalletView.swift in Sources */,
+				DA58D0962AAB607F0094DC4E /* SignupViewModel.swift in Sources */,
+				DA58D0992AABA4F50094DC4E /* ColorOption.swift in Sources */,
+				DA366DEC2AAD1119008C3316 /* AddMemberView.swift in Sources */,
+				DAE27B782AACA1B600EC665A /* Activity.swift in Sources */,
+				DA366DE02AACE369008C3316 /* ActivityRow.swift in Sources */,
+				DA9CA5E32AAA374100B0C271 /* LoginView.swift in Sources */,
+				DA58FE2F2AAA6D93002FF8DD /* HomeView.swift in Sources */,
+				DA9DFDD42AAC81BF00E5625A /* ScanCodeView.swift in Sources */,
+				DA9CA5E52AAA3B9900B0C271 /* LoginViewModel.swift in Sources */,
+				DA9CA5C72AAA259F00B0C271 /* DivifyApp.swift in Sources */,
+				DA366DE62AACF537008C3316 /* MemberRow.swift in Sources */,
+				DA9DFDD22AAC81A800E5625A /* TransactionView.swift in Sources */,
+				DA366DE22AACE8DE008C3316 /* GroupEditor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DA9CA5D42AAA25A100B0C271 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DA9CA5D52AAA25A100B0C271 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DA9CA5D72AAA25A100B0C271 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Divify/Preview Content\"";
+				DEVELOPMENT_TEAM = 288ZUH88HD;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = artemiymalyshau.Divify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DA9CA5D82AAA25A100B0C271 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Divify/Preview Content\"";
+				DEVELOPMENT_TEAM = 288ZUH88HD;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = artemiymalyshau.Divify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA9CA5BE2AAA259F00B0C271 /* Build configuration list for PBXProject "Divify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA9CA5D42AAA25A100B0C271 /* Debug */,
+				DA9CA5D52AAA25A100B0C271 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA9CA5D62AAA25A100B0C271 /* Build configuration list for PBXNativeTarget "Divify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA9CA5D72AAA25A100B0C271 /* Debug */,
+				DA9CA5D82AAA25A100B0C271 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DA58FE3B2AAB4FEC002FF8DD /* XCRemoteSwiftPackageReference "AlertToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elai950/AlertToast.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		DA9CA5D92AAA337B00B0C271 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DA58FE3C2AAB4FEC002FF8DD /* AlertToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA58FE3B2AAB4FEC002FF8DD /* XCRemoteSwiftPackageReference "AlertToast" */;
+			productName = AlertToast;
+		};
+		DA9CA5DA2AAA337B00B0C271 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA9CA5D92AAA337B00B0C271 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		DA9CA5DC2AAA337B00B0C271 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA9CA5D92AAA337B00B0C271 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		DA9CA5D12AAA25A100B0C271 /* Divify.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DA9CA5D22AAA25A100B0C271 /* Divify.xcdatamodel */,
+			);
+			currentVersion = DA9CA5D22AAA25A100B0C271 /* Divify.xcdatamodel */;
+			path = Divify.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DA9CA5BB2AAA259F00B0C271 /* Project object */;
+}

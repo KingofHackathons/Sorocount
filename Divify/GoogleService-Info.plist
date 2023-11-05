@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>821613971339-48en4edl4imonerhf91tj5dmhmeh4nhg.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.821613971339-48en4edl4imonerhf91tj5dmhmeh4nhg</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDHkA7DflBkUYAsCKE5tjXtaCtk_iAxn3k</string>
+	<key>GCM_SENDER_ID</key>
+	<string>821613971339</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>artemiymalyshau.Divify</string>
+	<key>PROJECT_ID</key>
+	<string>divify-37c8e</string>
+	<key>STORAGE_BUCKET</key>
+	<string>divify-37c8e.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:821613971339:ios:70888f88258a4e0e80918e</string>
+</dict>
+</plist>
